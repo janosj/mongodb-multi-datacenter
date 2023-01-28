@@ -20,7 +20,7 @@ mongosh --quiet --port $port --eval "
   print( 'Restoring votes & priority to Node 0 ...' )
 
   cfg = rs.conf();
-  cfg.members[0].priority = 1;
+  cfg.members[0].priority = 10;
   cfg.members[0].votes = 1;
   rs.reconfig( cfg );
 
@@ -30,7 +30,7 @@ mongosh --quiet --port $port --eval "
   print( '\nRestoring votes & priority to Node 1 ...' )
 
   cfg = rs.conf();
-  cfg.members[1].priority = 1;
+  cfg.members[1].priority = 9;
   cfg.members[1].votes = 1;
   rs.reconfig( cfg );
 

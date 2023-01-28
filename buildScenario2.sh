@@ -7,7 +7,8 @@
 # Deploys a 5-node RS on the local machine.
 ./1-launchRS.sh 5
 
-./2-set-mdb-uri.sh 5
+echo "Waiting a bit before configuring non-voting members..."
+sleep 10
 
 # Reconfigures node 3 to priority:0, votes: 0
 # (Node numbering starts at 0)

@@ -5,12 +5,11 @@
 
 source demo.conf
 
-if [ $# -lt 2 ]; then
+rsID=$1
+if [ -z "$rsID" ]; then
   echo "USAGE: setp0v0.sh <rs-number, starting at 0>"
   exit 1
 fi
-
-rsID=$2
 
 mongosh $MDB_URI --eval "
 

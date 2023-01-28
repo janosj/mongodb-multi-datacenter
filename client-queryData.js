@@ -1,3 +1,6 @@
+// Node.js quick start: 
+// https://www.mongodb.com/docs/drivers/node/current/quick-start/
+
 const { MongoClient } = require("mongodb");
 
 // Pick up the MongoDB URI as an environment variable.

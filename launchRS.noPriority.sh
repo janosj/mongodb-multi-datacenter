@@ -1,11 +1,6 @@
 #!/bin/bash
 # Deploys and initiates a multi-node replica set on localhost.
-
-# Priority setting:
-# RS members are launched with progressively lower priority
-# (i.e. node 0 will have the highest priority, node z the lowest).
-# For demo purposes, this makes behavior more predictable.
-# In real life, priority could be used to indicate a preferred DC.
+# Unlike its counterpart script, all RS members receive the same (default) priority.
 
 source demo.conf
 
@@ -34,7 +29,6 @@ db_port=$BASE_MDB_PORT
 initiateRS_stmt="rs.initiate( { _id: '$RS_NAME', members: ["
 
 nodeID=0;
-priority=10; # See note above about priorities.
 for (( i=1; i<=$node_count; i++ ))
 do 
   echo "Launching MDB$i on port $db_port..."
@@ -52,11 +46,10 @@ do
     # Adds a comma to separate RS hosts
     initiateRS_stmt="$initiateRS_stmt,"
   fi
-  initiateRS_stmt="$initiateRS_stmt { _id:$nodeID, host: 'localhost:$db_port', priority:$priority }"
+  initiateRS_stmt="$initiateRS_stmt { _id:$nodeID, host: 'localhost:$db_port' }"
 
-  ((nodeID++))
   ((db_port++))
-  ((priority--))
+  ((nodeID++))
   echo
 
 done

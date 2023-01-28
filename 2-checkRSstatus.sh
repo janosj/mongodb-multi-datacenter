@@ -15,11 +15,16 @@ mongosh --quiet "$MDB_URI" --shell --eval "
   rsNodeCount=state.members.length
 
   print('\nConnected to local ' + rsNodeCount + '-node Replica Set!')
+
   print('\nTo view the complete RS configuration, run the following command:')
   print('rs.conf()')
+
   print('\nTo show the status of all RS members, run this:')
   print('state=rs.status()')
   print('for (let i=0; i<' + rsNodeCount + '; i++) { print( state.members[i]._id, state.members[i].stateStr) }\n')
+
+  print('Or, run this: load(\'checkRSvotes.js\')\n')
+
 "
 
 

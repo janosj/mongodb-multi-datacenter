@@ -27,3 +27,5 @@ mongosh --quiet --port $port --eval "
 
 "
 
+echo -e "\nGive the reconfigured cluster a second to produce a new Primary.\n"
+
