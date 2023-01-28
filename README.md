@@ -27,9 +27,9 @@ The scripts provided in this folder can be used to simulate various architecture
 | 3-runInserts.sh | A node.js client that performs continual inserts using a specified writeConcern
 | 4-runQuery.sh | A node.js client that performs continual queries using a specified readPreference
 | 5-killMDBprocess.sh | Kills the specified Replica Set member
-| 6-intervention.(3/5)node.sh | Reconfigures the surviving data center to elect a new Primary and resume normal operations. Variants provided for both a 3- and 5-node deployment.
+| 6-intervention.(3/5)node.sh | Reconfigures the surviving data center to elect a new Primary and resume normal operations. Variants provided for both a 3- and 5-node deployment (scenarios 1 and 2).
 | 7-restoreRSmember.sh | Relaunches a previously killed Replica Set member
-| 8-restoreVotes.(3/5)node.sh | Restores the original vote configuration across the two Data Centers. Variants provided for both a 3- and 5-node deployment.
+| 8-restoreVotes.(3/5)node.sh | Restores the original vote configuration across the two Data Centers. Variants provided for both a 3- and 5-node deployment (scenarios 1 and 2).
 | checkRSvotes.sh | Lists the RS primary and secondaries along with their vote counts.
 | buildScenario2.sh | Builds demo scenario 2 by launching a 5-node Replica Set with the corresponding vote and priority settings. (Note that building Scenario 1 is trivial and can be accomplished using '1-launchRS.sh 3')
 | shutdownRS.sh | Shuts down the Replica Set and removes the data files
