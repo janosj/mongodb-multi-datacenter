@@ -89,7 +89,7 @@ MDB_URI="$MDB_URI/?replicaSet=$RS_NAME"
 # Writes the MDB_URI to demo.conf
 sed -i '' "s|^MDB_URI.*|MDB_URI=$MDB_URI|g" demo.conf
 
-# Writes the MDB_URI to demo.conf
+# Writes the Node Count to demo.conf
 sed -i '' "s|^NODE_COUNT.*|NODE_COUNT=$node_count|g" demo.conf
 
 echo
