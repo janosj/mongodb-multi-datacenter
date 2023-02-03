@@ -24,8 +24,8 @@ The scripts provided in this folder can be used to simulate various architecture
 |---|---|
 | 1-launchRS.sh | Launches a multi-node replica set on your local machine
 | 2-checkRSstatus.sh | Connects to the local replica set and lists its primary and secondaries
-| 3-runInserts.sh | A node.js client that performs continual inserts using a specified writeConcern
-| 4-runQuery.sh | A node.js client that performs continual queries using a specified readPreference
+| 3-runInserts.sh | Launches a node.js client that performs continual inserts using a specified writeConcern
+| 4-runQuery.sh | Launches a node.js client that performs continual queries using a specified readPreference
 | 5-killMDBprocess.sh | Kills the specified Replica Set member
 | 6-intervention.(3/5)node.sh | Reconfigures the surviving data center to elect a new Primary and resume normal operations. Variants provided for both a 3- and 5-node deployment (scenarios 1 and 2).
 | 7-restoreRSmember.sh | Relaunches a previously killed Replica Set member
