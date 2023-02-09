@@ -19,6 +19,9 @@ echo "ps -ef | grep mongod"
 ps -ef | grep mongod
 echo
 
+echo "Waiting a bit..."
+sleep 3
+
 echo "Deleting data directories..."
 rm -rf $HOME/myStuff/demos/multi-dc-demo
 
